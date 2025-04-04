@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Info App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* ✅ Adds spacing between buttons */
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fruit Info</h1>
+        <div class="buttons">
+            <button id="apple-btn">Apple</button>
+            <button id="banana-btn">Banana</button>
+        </div>
+        <img id="fruit-image" src="https://via.placeholder.com/150" alt="Fruit">
+        <p id="fruit-fact">Click a button to learn about a fruit!</p> <!-- ✅ Added ID -->
+    </div>
+
+    <script>
+        document.getElementById("apple-btn").addEventListener("click", function() {
+            document.getElementById("fruit-image").src = "https://via.placeholder.com/150/FF0000/FFFFFF?text=Apple";
+            document.getElementById("fruit-fact").innerText = "Apples are rich in fiber and vitamin C!";
+        });
+
+        document.getElementById("banana-btn").addEventListener("click", function() {
+            document.getElementById("fruit-image").src = "https://via.placeholder.com/150/FFFF00/000000?text=Banana";
+            document.getElementById("fruit-fact").innerText = "Bananas are a great source of potassium!";
+        });
+    </script>
+
+</body>
+</html>

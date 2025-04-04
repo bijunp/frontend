@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttontoggle</title>
+</head>
+<style>
+
+body{
+
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: beige;
+text-align: center;
+
+
+
+}
+
+div{
+
+
+justify-content: center;
+align-items: center;
+
+
+
+}
+
+button{
+ 
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+
+
+
+}
+
+
+
+
+</style>
+<body>
+    <div>
+    
+        <h1 id="h1">Hello</h1>
+        
+        <button id="btn">click</button>
+
+
+    </div>
+   
+</body>
+
+<script>
+    let name=prompt("enter the name");
+    let hed=document.getElementById("h1");
+let btnn=document.getElementById("btn").addEventListener("click",function(){
+hed.innerText=name;
+})
+
+
+</script>
+</html>
